@@ -12,7 +12,7 @@ defmodule ReportsGenerator.ParserTest do
         |> Parser.parse_file()
         |> Enum.map(& &1)
 
-      excepted_response = [
+      expected_response = [
         ["1", "pizza", 48],
         ["2", "açaí", 45],
         ["3", "hambúrguer", 31],
@@ -25,7 +25,7 @@ defmodule ReportsGenerator.ParserTest do
         ["10", "churrasco", 36]
       ]
 
-      assert response == excepted_response
+      assert response == expected_response
     end
   end
 end
